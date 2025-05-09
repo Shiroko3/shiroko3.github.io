@@ -13,6 +13,22 @@
 </head>
 
 <body> 
+<script src="/js/sweetalert.min.js"></script>
+<script>
+swal('警告','本站仅供展示,为项目刚刚上线的怀旧站,正式官网请前往: www.yra2.com','warning'); function AddFavorite(title, url) {
+  try {
+      window.external.addFavorite(url, title);
+  }
+catch (e) {
+     try {
+       window.sidebar.addPanel(title, url,);
+    }
+     catch (e) {
+         alert("抱歉, 您所使用的浏览器无法完成此操作");
+     }
+  }
+}
+</script>
 <nav class="navbar navbar-dark navbar-expand-lg fixed-top bg-white portfolio-navbar gradient">
 <div class="container"><a class="navbar-brand logo" href="/">红色警戒2022</a><button data-bs-toggle="collapse" class="navbar-toggler" data-bs-target="#navbarNav"><span class="visually-hidden">Toggle navigation</span><span class="navbar-toggler-icon"></span></button>
 <div class="collapse navbar-collapse" id="navbarNav">
